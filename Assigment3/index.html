@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resources/style.css" />
+    <link rel="stylesheet" href="./resources/bootstrap.css" />
+    <title>COVID-19 TRACKER</title>
+  </head>
+  <body>
+    <div class="body">
+      <!-- SEARCH -->
+      <div class="container">
+        <div class="header">
+          <p><img src="./resources/Logo/logo.png" alt="" /></p>
+          <h1>COVID-19 TRACKER</h1>
+        </div>
+        <input type="text" class="inputElement" placeholder="Masukan Nama Negara" />
+        <button class="btn">Get Data</button>
+        <br />
+        <br />
+        <!-- BODY -->
+        <div id="container">
+          <div class="activeCasesDiv">
+            Active Cases
+            <p class="activeCases"></p>
+            <p class="img"><img src="./resources/Logo/cases.png" alt="" height="60" width="60" /></p>
+          </div>
+          <div class="newCasesDiv">
+            New Cases
+            <p class="newCases"></p>
+            <p class="img"><img src="./resources/Logo/new cases.png" alt="" height="60" width="60" /></p>
+          </div>
+          <div class="recoveredCasesDiv">
+            Recovered Cases
+            <p class="recoveredCases"></p>
+            <p class="img"><img src="./resources/Logo/recover.png" alt="" height="60" width="60" /></p>
+          </div>
+        </div>
+        <br />
+        <div id="container">
+          <div class="totalCasesDiv">
+            Total Cases
+            <p class="totalCases"></p>
+            <p class="img"><img src="./resources/Logo/total cases.png" alt="" height="60" width="60" /></p>
+          </div>
+          <div class="totalDeathsDiv">
+            Total Deaths
+            <p class="totalDeaths"></p>
+            <p class="img"><img src="./resources/Logo/rip.png" alt="" height="60" width="60" /></p>
+          </div>
+          <div class="totalTestDiv">
+            Total Test
+            <p class="totalTest"></p>
+            <p class="img"><img src="./resources/Logo/tes.png" alt="" height="60" width="60" /></p>
+          </div>
+        </div>
+        <!-- FOOTER -->
+        <div class="footer-container">
+          <div class="copyright">
+            <p>Copyright © 2022 Muhamad Abdul Ghofur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelector(".btn");
+    const inputElement = document.querySelector(".inputElement");
+    btn.addEventListener("click", getData);
+    function getData() {
+      const options = {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": "e647722e0bmshe8c1a65ff5d6066p100b99jsnb811b024d6ec",
+          "X-RapidAPI-Host": "covid-193.p.rapidapi.com",
+        },
+      };
+
+      fetch("https://covid-193.p.rapidapi.com/statistics", options)
+        .then((response) => response.json())
+        .then((json) => {
+          let data = json.response[0];
+          document.querySelector(".activeCases").innerHTML = data.cases.active;
+          document.querySelector(".newCases").innerHTML = data.cases.new;
+          document.querySelector(".recoveredCases").innerHTML = data.cases.recovered;
+          document.querySelector(".totalCases").innerHTML = data.cases.total;
+          document.querySelector(".totalDeaths").innerHTML = data.deaths.total;
+          document.querySelector(".totalTest").innerHTML = data.tests.total;
+        });
+    }
+  </script>
+</html>
