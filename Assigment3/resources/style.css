@@ -1,0 +1,133 @@
+/* HEADER */
+.header {
+  display: flex;
+  margin-top: auto;
+  margin-left: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+/* SEARCH */
+.search {
+  text-align: center;
+  border-radius: 10px;
+}
+.inputElement {
+  border-radius: 10px;
+}
+/* BUTTON */
+.btn {
+  border-radius: 10px;
+  color: blue;
+  background-color: white;
+  border: none;
+}
+/* CONTAINER */
+#container {
+  background-color: aliceblue;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.container {
+  background-color: orange;
+  border-radius: 10px;
+}
+/* REPORT */
+.activeCasesDiv {
+  font-size: 16px;
+  font-weight: bold;
+  color: orangered;
+  margin: 5px;
+}
+.activeCases {
+  font-size: 14px;
+  color: orangered;
+  margin: 5px;
+}
+.newCasesDiv {
+  font-size: 16px;
+  margin: 5px;
+  font-weight: bold;
+  color: greenyellow;
+}
+.newCases {
+  font-size: 14px;
+  margin: 5px;
+  color: greenyellow;
+}
+.recoveredCasesDiv {
+  font-size: 16px;
+  margin: 5px;
+  font-weight: bold;
+  color: green;
+}
+.recoveredCases {
+  font-size: 14px;
+  margin: 5px;
+  color: green;
+}
+.totalCasesDiv {
+  font-size: 16px;
+  margin: 5px;
+  font-weight: bold;
+  color: blue;
+}
+.totalCases {
+  font-size: 14px;
+  margin: 5px;
+  color: blue;
+}
+.totalDeathsDiv {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+  color: red;
+}
+.totalDeaths {
+  font-size: 14px;
+  margin: 5px;
+  color: red;
+}
+.totalTestDiv {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+  color: yellow;
+}
+.totalTest {
+  font-size: 14px;
+  margin: 5px;
+  color: yellow;
+}
+/* IMAGE */
+.img {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+/* COPYRIGHT */
+.copyright {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/* BODY */
+.body {
+  background-color: orangered;
+  padding: 50px;
+}
